@@ -5,9 +5,11 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Directory", path: "/directory" },
+  { label: "Policies", path: "/policies" },
   { label: "Rankings", path: "/rankings" },
+  { label: "Visualizations", path: "/visualizations" },
+  { label: "Blog", path: "/blog" },
   { label: "Methodology", path: "/about" },
-  { label: "Membership", path: "/membership" },
 ];
 
 export default function Navbar() {
@@ -21,45 +23,28 @@ export default function Navbar() {
           <Globe className="h-6 w-6 text-accent" />
           <span>Paid<span className="text-accent">ToBe</span></span>
         </Link>
-
-        {/* Desktop */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
             <Link key={item.path} to={item.path}>
-              <Button
-                variant={location.pathname === item.path ? "secondary" : "ghost"}
-                size="sm"
-                className="text-sm font-medium"
-              >
+              <Button variant={location.pathname === item.path ? "secondary" : "ghost"} size="sm" className="text-sm font-medium">
                 {item.label}
               </Button>
             </Link>
           ))}
           <Link to="/membership">
-            <Button size="sm" className="ml-2 bg-accent text-accent-foreground hover:bg-accent/90">
-              Join Now
-            </Button>
+            <Button size="sm" className="ml-2 bg-accent text-accent-foreground hover:bg-accent/90">Join Now</Button>
           </Link>
         </nav>
-
-        {/* Mobile toggle */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
+        <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
       </div>
-
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t bg-background p-4 md:hidden">
+        <div className="border-t bg-background p-4 lg:hidden">
           <nav className="flex flex-col gap-2">
             {navItems.map((item) => (
               <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)}>
-                <Button
-                  variant={location.pathname === item.path ? "secondary" : "ghost"}
-                  className="w-full justify-start"
-                >
-                  {item.label}
-                </Button>
+                <Button variant={location.pathname === item.path ? "secondary" : "ghost"} className="w-full justify-start">{item.label}</Button>
               </Link>
             ))}
             <Link to="/membership" onClick={() => setMobileOpen(false)}>
