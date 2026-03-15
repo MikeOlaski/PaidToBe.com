@@ -1,4 +1,4 @@
-# SafetyNet Global — Architecture
+# PaidToBe — Architecture
 
 ## Tech Stack
 

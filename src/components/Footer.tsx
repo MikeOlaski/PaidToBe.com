@@ -9,10 +9,10 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 font-serif text-lg font-bold">
               <Globe className="h-5 w-5 text-accent" />
-              SafetyNet<span className="text-accent">Global</span>
+              Paid<span className="text-accent">ToBe</span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
-              Tracking the world's readiness for a post-labor economy. Know where to thrive.
+            Tracking the world's readiness for a post-labor economy. Know where to thrive.
             </p>
           </div>
           <div>
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} SafetyNet Global. All rights reserved.
+          © {new Date().getFullYear()} PaidToBe.com. All rights reserved.
         </div>
       </div>
     </footer>

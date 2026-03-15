@@ -149,7 +149,7 @@ export default function Index() {
           <div className="mx-auto max-w-2xl rounded-2xl bg-primary p-10 text-center text-primary-foreground md:p-14">
             <h2 className="font-serif text-3xl font-bold">Stay ahead of the curve</h2>
             <p className="mt-4 opacity-80">
-              Get early access to policy changes, prediction market shifts, and AI-aggregated intelligence from 28+ jurisdictions.
+          Get early access to policy changes, prediction market shifts, and AI-aggregated intelligence from 28+ jurisdictions.
             </p>
             <Link to="/membership">
               <Button size="lg" className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90">

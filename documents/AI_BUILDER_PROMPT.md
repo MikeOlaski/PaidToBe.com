@@ -1,12 +1,12 @@
-# SafetyNet Global — Build Prompt for AI Studio Code
+# PaidToBe — Build Prompt for AI Studio Code
 
-Use this prompt to recreate the SafetyNet Global project in another AI code builder.
+Use this prompt to recreate the PaidToBe project in another AI code builder.
 
 ---
 
 ## PROMPT START
 
-Build a web application called **SafetyNet Global** — a directory and intelligence platform that ranks countries on their readiness for a post-AI labor economy (UBI, Universal High Income, social safety nets).
+Build a web application called **PaidToBe** (domain: PaidToBe.com) — a directory and intelligence platform that ranks countries on their readiness for a post-AI labor economy (UBI, Universal High Income, social safety nets).
 
 ### Target Audience
 Wealthy, globally mobile expats with dual citizenship or multi-nation mobility, AND concerned citizens wanting to influence policy in their jurisdiction.
@@ -73,7 +73,7 @@ Clean editorial aesthetic (like Monocle magazine or Nomad List) with modern SaaS
 - Update frequency note
 
 ### Shared Components
-- **Navbar**: Logo (globe icon + "SafetyNetGlobal"), nav links (Directory, Rankings, Methodology, Membership), "Join Now" accent button, mobile hamburger menu
+- **Navbar**: Logo (globe icon + "PaidToBe"), nav links (Directory, Rankings, Methodology, Membership), "Join Now" accent button, mobile hamburger menu
 - **Footer**: 4-column grid (brand description, Explore links, Membership links, Community links with "coming soon" items)
 - **CountryCard**: Reusable card component used on landing page and directory
 

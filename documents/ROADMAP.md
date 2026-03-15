@@ -1,4 +1,4 @@
-# SafetyNet Global — Roadmap
+# PaidToBe — Roadmap
 
 ## Phase 1: MVP Foundation ✅ (Current)
 _Status: Complete_

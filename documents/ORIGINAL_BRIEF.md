@@ -1,4 +1,4 @@
-# SafetyNet Global — Original Brief & Design Decisions
+# PaidToBe — Original Brief & Design Decisions
 
 ## Original Prompt (verbatim)
 
@@ -24,7 +24,7 @@
 
 ## Key Design Decisions Made
 
-1. **Name**: SafetyNet Global
+1. **Name**: PaidToBe (PaidToBe.com)
 2. **Tagline**: "Where will you thrive when AI replaces jobs?"
 3. **Typography**: Source Serif 4 (headlines) + Inter (body) — editorial authority with modern readability
 4. **Palette**: Deep blue primary (#1A3A5C), teal accent (#3D9E7C), warm off-white background — trustworthy but not cold
