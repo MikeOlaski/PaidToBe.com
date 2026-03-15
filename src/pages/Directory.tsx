@@ -263,7 +263,7 @@ export default function Directory() {
         )}
 
         {/* ─── Timeline View ─── */}
-        {view === "timeline" && <TimelineView countries={filtered} />}
+        {view === "timeline" && <GanttTimeline countries={filtered} />}
 
         {filtered.length === 0 && (
           <div className="py-20 text-center text-muted-foreground">
