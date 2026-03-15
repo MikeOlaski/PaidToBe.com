@@ -120,8 +120,8 @@ export default function Home() {
               <Link to="/directory">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8 h-12"
+                  variant="secondary"
+                  className="text-base px-8 h-12"
                 >
                   Explore the Data
                 </Button>
