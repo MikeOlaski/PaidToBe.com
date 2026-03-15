@@ -12,7 +12,7 @@ export default function Footer() {
               Paid<span className="text-accent">ToBe</span>
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
-              Tracking the world's readiness for a post-labor economy. Know where to thrive.
+            Tracking the world's readiness for a post-labor economy. Know where to thrive.
             </p>
           </div>
           <div>
