@@ -72,56 +72,7 @@ function CountryListItem({ country }: { country: Country }) {
   );
 }
 
-/* ───── Timeline View ───── */
-function TimelineView({ countries: list }: { countries: Country[] }) {
-  const events = useMemo(() => {
-    const all: { country: Country; event: Country["policyTimeline"][0] }[] = [];
-    list.forEach((c) => c.policyTimeline.forEach((e) => all.push({ country: c, event: e })));
-    all.sort((a, b) => b.event.year - a.event.year);
-    return all;
-  }, [list]);
-
-  const grouped = useMemo(() => {
-    const map = new Map<number, typeof events>();
-    events.forEach((e) => {
-      if (!map.has(e.event.year)) map.set(e.event.year, []);
-      map.get(e.event.year)!.push(e);
-    });
-    return Array.from(map.entries());
-  }, [events]);
-
-  if (events.length === 0) {
-    return <p className="py-10 text-center text-muted-foreground">No timeline events for the current filter.</p>;
-  }
-
-  return (
-    <div className="relative space-y-8 pl-6 before:absolute before:left-2.5 before:top-0 before:h-full before:w-px before:bg-border">
-      {grouped.map(([year, items]) => (
-        <div key={year}>
-          <div className="relative -ml-6 mb-3 flex items-center gap-2">
-            <div className="h-5 w-5 rounded-full bg-primary shrink-0" />
-            <h3 className="font-serif text-lg font-bold">{year}</h3>
-          </div>
-          <div className="space-y-3">
-            {items.map((item, i) => (
-              <Link key={`${item.country.id}-${i}`} to={`/country/${item.country.id}`} className="block">
-                <div className={`rounded-lg border p-3 transition-all hover:shadow-md ${eventTypeColor(item.event.type)}`}>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-lg">{item.country.flag}</span>
-                    <span className="font-medium text-sm">{item.country.name}</span>
-                    <Badge variant="outline" className="text-[10px] uppercase">{item.event.type}</Badge>
-                  </div>
-                  <p className="font-medium text-sm">{item.event.title}</p>
-                  <p className="text-xs opacity-80 mt-0.5">{item.event.description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
+/* TimelineView replaced by GanttTimeline component */
 
 export default function Directory() {
   const [search, setSearch] = useState("");
