@@ -1,4 +1,4 @@
-# SafetyNet Global — Original Brief & Design Decisions
+# PaidToBe — Original Brief & Design Decisions
 
 ## Original Prompt (verbatim)
 
