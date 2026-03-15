@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Directory", path: "/directory" },
+  { label: "Jobs Directory", path: "/jobs" },
+  { label: "Country Directory", path: "/directory" },
   { label: "Policies", path: "/policies" },
   { label: "Rankings", path: "/rankings" },
   { label: "Visualizations", path: "/visualizations" },

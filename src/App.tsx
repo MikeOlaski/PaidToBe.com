@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Directory from "./pages/Directory";
 import CountryDetail from "./pages/CountryDetail";
+import JobsDirectory from "./pages/JobsDirectory";
+import JobDetail from "./pages/JobDetail";
 import Rankings from "./pages/Rankings";
 import Membership from "./pages/Membership";
 import About from "./pages/About";
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/data" element={<Index />} />
           <Route path="/directory" element={<Directory />} />
           <Route path="/country/:id" element={<CountryDetail />} />
+          <Route path="/jobs" element={<JobsDirectory />} />
+          <Route path="/a/:slug" element={<JobDetail />} />
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/about" element={<About />} />
