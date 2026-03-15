@@ -73,7 +73,7 @@ Clean editorial aesthetic (like Monocle magazine or Nomad List) with modern SaaS
 - Update frequency note
 
 ### Shared Components
-- **Navbar**: Logo (globe icon + "SafetyNetGlobal"), nav links (Directory, Rankings, Methodology, Membership), "Join Now" accent button, mobile hamburger menu
+- **Navbar**: Logo (globe icon + "PaidToBe"), nav links (Directory, Rankings, Methodology, Membership), "Join Now" accent button, mobile hamburger menu
 - **Footer**: 4-column grid (brand description, Explore links, Membership links, Community links with "coming soon" items)
 - **CountryCard**: Reusable card component used on landing page and directory
 

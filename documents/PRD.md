@@ -1,7 +1,7 @@
-# SafetyNet Global — Product Requirements Document
+# PaidToBe — Product Requirements Document
 
 ## Overview
-SafetyNet Global is a directory and intelligence platform ranking countries/jurisdictions on their readiness for a post-AI labor economy. It targets wealthy, mobile individuals (expats, dual citizens, multi-nation mobility) seeking the best social safety nets, UBI programs, and universal high income policies worldwide.
+PaidToBe is a directory and intelligence platform ranking countries/jurisdictions on their readiness for a post-AI labor economy. It targets wealthy, mobile individuals (expats, dual citizens, multi-nation mobility) seeking the best social safety nets, UBI programs, and universal high income policies worldwide.
 
 ## Problem Statement
 AI disruption is transforming global labor markets. Citizens and mobile professionals need to know:

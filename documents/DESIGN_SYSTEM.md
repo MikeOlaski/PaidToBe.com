@@ -1,4 +1,4 @@
-# SafetyNet Global — Design System
+# PaidToBe — Design System
 
 ## Design Philosophy
 Clean editorial aesthetic (Monocle/Nomad List inspired) with modern SaaS polish. Data-forward but approachable — not just for finance professionals, also for concerned citizens advocating for policy change.

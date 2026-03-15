@@ -1,4 +1,4 @@
-# SafetyNet Global — Data Model
+# PaidToBe — Data Model
 
 ## Core Types
 
