@@ -28,7 +28,9 @@ const App = () => (
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/data" element={<Index />} />
           <Route path="/directory" element={<Directory />} />
           <Route path="/country/:id" element={<CountryDetail />} />
           <Route path="/rankings" element={<Rankings />} />
