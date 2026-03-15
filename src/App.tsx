@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Directory from "./pages/Directory";
 import CountryDetail from "./pages/CountryDetail";
