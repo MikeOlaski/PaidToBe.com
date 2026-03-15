@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Directory from "./pages/Directory";
 import CountryDetail from "./pages/CountryDetail";
@@ -27,7 +28,9 @@ const App = () => (
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/data" element={<Index />} />
           <Route path="/directory" element={<Directory />} />
           <Route path="/country/:id" element={<CountryDetail />} />
           <Route path="/rankings" element={<Rankings />} />
