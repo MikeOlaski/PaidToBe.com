@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-serif text-xl font-bold text-foreground">
           <Globe className="h-6 w-6 text-accent" />
-          <span>SafetyNet<span className="text-accent">Global</span></span>
+          <span>Paid<span className="text-accent">ToBe</span></span>
         </Link>
 
         {/* Desktop */}

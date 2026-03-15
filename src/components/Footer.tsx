@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} SafetyNet Global. All rights reserved.
+          © {new Date().getFullYear()} PaidToBe.com. All rights reserved.
         </div>
       </div>
     </footer>

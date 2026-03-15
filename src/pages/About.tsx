@@ -64,7 +64,7 @@ export default function About() {
         <div className="mt-16 rounded-2xl bg-primary p-10 text-primary-foreground">
           <h2 className="font-serif text-2xl font-bold">Our Mission</h2>
           <p className="mt-4 opacity-80 leading-relaxed">
-            AI is transforming the global labor market faster than policy can keep up. SafetyNet Global exists to help individuals — whether globally mobile expats or concerned citizens — understand which jurisdictions are leading the transition to a post-labor economy.
+            AI is transforming the global labor market faster than policy can keep up. PaidToBe exists to help individuals — whether globally mobile expats or concerned citizens — understand which jurisdictions are leading the transition to a post-labor economy.
           </p>
           <p className="mt-4 opacity-80 leading-relaxed">
             We believe everyone deserves access to information about policies that will shape their economic future. Whether you're choosing where to plant roots or advocating for change where you are, we provide the data and intelligence to make informed decisions.
