@@ -80,11 +80,6 @@ function TimelineView({ countries: list }: { countries: Country[] }) {
     return all;
   }, [list]);
 
-  if (events.length === 0) {
-    return <p className="py-10 text-center text-muted-foreground">No timeline events for the current filter.</p>;
-  }
-
-  // Group by year
   const grouped = useMemo(() => {
     const map = new Map<number, typeof events>();
     events.forEach((e) => {
@@ -93,6 +88,10 @@ function TimelineView({ countries: list }: { countries: Country[] }) {
     });
     return Array.from(map.entries());
   }, [events]);
+
+  if (events.length === 0) {
+    return <p className="py-10 text-center text-muted-foreground">No timeline events for the current filter.</p>;
+  }
 
   return (
     <div className="relative space-y-8 pl-6 before:absolute before:left-2.5 before:top-0 before:h-full before:w-px before:bg-border">
