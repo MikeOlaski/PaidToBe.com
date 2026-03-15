@@ -73,9 +73,13 @@ export default function CountryCard({ country }: { country: Country }) {
               </div>
             </div>
           </div>
-          <p className="text-xs text-muted-foreground">
-            GDP/capita: ${country.gdpPerCapita.toLocaleString()} · {country.population}
-          </p>
+          <div className="flex items-center justify-between text-xs text-muted-foreground">
+            <span>GDP/capita: ${country.gdpPerCapita.toLocaleString()} · {country.population}</span>
+            <span className="font-medium text-foreground" title="Cost of Thriving Index">CTI: {country.costOfThrivingIndex.toFixed(1)}%</span>
+          </div>
+          {country.annualCashTransfer > 0 && (
+            <p className="text-xs text-accent font-medium">${country.annualCashTransfer.toLocaleString()}/yr cash transfer</p>
+          )}
         </CardContent>
       </Card>
     </Link>
