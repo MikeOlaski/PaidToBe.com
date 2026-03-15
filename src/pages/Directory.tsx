@@ -8,6 +8,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Search, SlidersHorizontal, LayoutGrid, List, TableIcon, Clock } from "lucide-react";
 import CountryCard from "@/components/CountryCard";
+import GanttTimeline from "@/components/GanttTimeline";
 import { countries, regions, ubiStatuses, type Region, type UBIStatus, type Country } from "@/data/countries";
 
 type SortKey = "readinessScore" | "gdpPerCapita" | "policyMomentum" | "name";
