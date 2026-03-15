@@ -19,16 +19,17 @@ export default function Footer() {
             <h4 className="mb-3 font-serif font-semibold">Explore</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/directory" className="hover:text-foreground">Country Directory</Link></li>
+              <li><Link to="/policies" className="hover:text-foreground">Policies</Link></li>
               <li><Link to="/rankings" className="hover:text-foreground">Rankings</Link></li>
+              <li><Link to="/visualizations" className="hover:text-foreground">Visualizations</Link></li>
               <li><Link to="/about" className="hover:text-foreground">Methodology</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="mb-3 font-serif font-semibold">Membership</h4>
+            <h4 className="mb-3 font-serif font-semibold">Intelligence</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/membership" className="hover:text-foreground">Pricing</Link></li>
-              <li><span className="opacity-50">News Feed (coming soon)</span></li>
-              <li><span className="opacity-50">Alerts (coming soon)</span></li>
+              <li><Link to="/blog" className="hover:text-foreground">Blog & Coverage</Link></li>
+              <li><Link to="/membership" className="hover:text-foreground">Membership</Link></li>
             </ul>
           </div>
           <div>
