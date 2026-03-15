@@ -1,12 +1,12 @@
-# SafetyNet Global — Build Prompt for AI Studio Code
+# PaidToBe — Build Prompt for AI Studio Code
 
-Use this prompt to recreate the SafetyNet Global project in another AI code builder.
+Use this prompt to recreate the PaidToBe project in another AI code builder.
 
 ---
 
 ## PROMPT START
 
-Build a web application called **SafetyNet Global** — a directory and intelligence platform that ranks countries on their readiness for a post-AI labor economy (UBI, Universal High Income, social safety nets).
+Build a web application called **PaidToBe** (domain: PaidToBe.com) — a directory and intelligence platform that ranks countries on their readiness for a post-AI labor economy (UBI, Universal High Income, social safety nets).
 
 ### Target Audience
 Wealthy, globally mobile expats with dual citizenship or multi-nation mobility, AND concerned citizens wanting to influence policy in their jurisdiction.
