@@ -11,6 +11,10 @@ import CountryDetail from "./pages/CountryDetail";
 import Rankings from "./pages/Rankings";
 import Membership from "./pages/Membership";
 import About from "./pages/About";
+import Policies from "./pages/Policies";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Visualizations from "./pages/Visualizations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +33,10 @@ const App = () => (
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/about" element={<About />} />
+          <Route path="/policies" element={<Policies />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/visualizations" element={<Visualizations />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
