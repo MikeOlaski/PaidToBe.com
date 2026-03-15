@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# PaidToBe
 
-## Project info
+PaidToBe is a directory and intelligence platform ranking countries and jurisdictions on their readiness for a post-AI labor economy. It helps mobile individuals (expats, dual citizens) and policy researchers determine which regions offer the best social safety nets, Universal Basic Income (UBI) programs, and universal high-income policies to thrive amid AI disruption.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Project Context & Documentation
 
-## How can I edit this code?
+This repository is managed with AI assistants (like Claude) in mind. For comprehensive guidelines, architecture details, and domain knowledge, please reference the `documents/` directory:
 
-There are several ways of editing your application.
+- [**CLAUDE.md**](./CLAUDE.md) - Primary instructions for Claude Code and coding agents.
+- [**PRD.md**](./documents/PRD.md) - Product Requirements, Target Audience, and Features.
+- [**ARCHITECTURE.md**](./documents/ARCHITECTURE.md) - Tech Stack, Data Flow, and Project Structure.
+- [**DATA_MODEL.md**](./documents/DATA_MODEL.md) - Data structures and database schemas.
+- [**DESIGN_SYSTEM.md**](./documents/DESIGN_SYSTEM.md) - Tailwind tokens, typography, and styling choices.
+- [**ROADMAP.md**](./documents/ROADMAP.md) - Development roadmap and feature phases.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Tech Stack
 
 This project is built with:
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animation**: Framer Motion
+- **Routing**: React Router v6
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Getting Started
 
-## How can I deploy this project?
+### Prerequisites
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Ensure you have [Node.js](https://nodejs.org/) installed along with npm.
 
-## Can I connect a custom domain to my Lovable project?
+### Installation
 
-Yes, you can!
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/MikeOlaski/paidtobe.git
+   cd paidtobe
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2. Install the necessary dependencies:
+   ```sh
+   npm install
+   ```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:8080` (or the port specified by Vite in the terminal) to view the application.
+
+## Development Workflows
+
+- **Run Dev Server**: `npm run dev`
+- **Build for Production**: `npm run build`
+- **Lint Code**: `npm run lint`
+- **Run Tests**: `npm run test`
+- **Preview Production Build**: `npm run preview`
+
+## Contributing
+
+When contributing or prompting agents to build features, please ensure the newly generated code adheres to the instructions in `CLAUDE.md` and aligns with the design language established in `documents/DESIGN_SYSTEM.md`.
