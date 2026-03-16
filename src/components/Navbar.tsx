@@ -1,16 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
-import { Globe, Menu, X } from "lucide-react";
+import { Globe, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 
 const navItems = [
   { label: "Jobs Directory", path: "/jobs" },
-  { label: "Country Directory", path: "/directory" },
   { label: "Policies", path: "/policies" },
-  { label: "Rankings", path: "/rankings" },
-  { label: "Visualizations", path: "/visualizations" },
   { label: "Blog", path: "/blog" },
-  { label: "Methodology", path: "/about" },
+  { label: "About Us", path: "/about-us" },
 ];
 
 export default function Navbar() {
@@ -25,6 +28,24 @@ export default function Navbar() {
           <span>Paid<span className="text-accent">ToBe</span></span>
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="sm" className="text-sm font-medium gap-1">
+                Country Directory <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <Link to="/directory" className="w-full cursor-pointer">Directory Home</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/rankings" className="w-full cursor-pointer">Rankings</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/visualizations" className="w-full cursor-pointer">Visualizations</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           {navItems.map((item) => (
             <Link key={item.path} to={item.path}>
               <Button variant={location.pathname === item.path ? "secondary" : "ghost"} size="sm" className="text-sm font-medium">
@@ -43,6 +64,18 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="border-t bg-background p-4 lg:hidden">
           <nav className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1 px-4 py-2 border-l-2 ml-2">
+              <div className="text-sm font-semibold mb-1 text-muted-foreground">Country Directory</div>
+              <Link to="/directory" onClick={() => setMobileOpen(false)}>
+                <Button variant={location.pathname === "/directory" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Directory Home</Button>
+              </Link>
+              <Link to="/rankings" onClick={() => setMobileOpen(false)}>
+                <Button variant={location.pathname === "/rankings" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Rankings</Button>
+              </Link>
+              <Link to="/visualizations" onClick={() => setMobileOpen(false)}>
+                <Button variant={location.pathname === "/visualizations" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Visualizations</Button>
+              </Link>
+            </div>
             {navItems.map((item) => (
               <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)}>
                 <Button variant={location.pathname === item.path ? "secondary" : "ghost"} className="w-full justify-start">{item.label}</Button>

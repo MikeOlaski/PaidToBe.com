@@ -73,7 +73,7 @@ async function generateCountryData(countryName: string): Promise<any> {
       messages: [
         {
           role: 'user',
-          content: \`Generate the JSON data for: \${countryName}\`,
+          content: `Generate the JSON data for: ${countryName}`,
         },
       ],
     });
@@ -119,7 +119,7 @@ async function main() {
       allResults.push(finalObj);
       
       // Build the SQL tuple string here...
-      const sqlTuple = \`(\'\${finalObj.id}\', \'\${finalObj.name.replace(/'/g, "''")}\', \'\${finalObj.flag}\', \'\${finalObj.region}\', \'\${finalObj.population}\', \${finalObj.gdpPerCapita}, \'\${finalObj.politicalSystem}\', \${finalObj.readinessScore}, \${finalObj.safetyNetStrength}, \${finalObj.healthcareScore}, \${finalObj.visaAccessibility}, \${finalObj.policyMomentum}, \${finalObj.economicCapacity}, \${finalObj.politicalWill}, \${finalObj.expatAccessibility}, \${finalObj.workforceVulnerability}, \'\${finalObj.ubiStatus}\', '\${JSON.stringify(finalObj.topIndustries).replace(/'/g, "''")}'::jsonb, \'\${finalObj.costOfLiving}\', \${finalObj.dualCitizenship}, '\${JSON.stringify(finalObj.keyPolicies).replace(/'/g, "''")}'::jsonb, \'\${finalObj.summary.replace(/'/g, "''")}\', '\${JSON.stringify(finalObj.visaTypes).replace(/'/g, "''")}'::jsonb, \'\${finalObj.taxImplications.replace(/'/g, "''")}\', '\${JSON.stringify(finalObj.policyTimeline).replace(/'/g, "''")}'::jsonb),\n\`;
+      const sqlTuple = `('${finalObj.id}', '${finalObj.name.replace(/'/g, "''")}', '${finalObj.flag}', '${finalObj.region}', '${finalObj.population}', ${finalObj.gdpPerCapita}, '${finalObj.politicalSystem}', ${finalObj.readinessScore}, ${finalObj.safetyNetStrength}, ${finalObj.healthcareScore}, ${finalObj.visaAccessibility}, ${finalObj.policyMomentum}, ${finalObj.economicCapacity}, ${finalObj.politicalWill}, ${finalObj.expatAccessibility}, ${finalObj.workforceVulnerability}, '${finalObj.ubiStatus}', '${JSON.stringify(finalObj.topIndustries).replace(/'/g, "''")}'::jsonb, '${finalObj.costOfLiving}', ${finalObj.dualCitizenship}, '${JSON.stringify(finalObj.keyPolicies).replace(/'/g, "''")}'::jsonb, '${finalObj.summary.replace(/'/g, "''")}', '${JSON.stringify(finalObj.visaTypes).replace(/'/g, "''")}'::jsonb, '${finalObj.taxImplications.replace(/'/g, "''")}', '${JSON.stringify(finalObj.policyTimeline).replace(/'/g, "''")}'::jsonb),\n`;
       
       fs.appendFileSync(sqlFilePath, sqlTuple);
       console.log(`✅ Finished ${baseObj.name}`);
