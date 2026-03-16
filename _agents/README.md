@@ -6,21 +6,27 @@ This directory contains the documentation, workflows, and prompts for the AI Age
 
 ## Fleet of Resident Agents
 
-The following specialized agents form the operational backbone of PaidToBe:
+The following specialized agents form the operational backbone of PaidToBe, orchestrated by a single primary decision-maker:
 
-### 1. Developer Agent (Codebase & Infrastructure)
+### 1. CEO Agent (The Prime Orchestrator)
+* **Entity:** Primary LLM Supervisor (e.g., Claude Opus / autonomous orchestrator)
+* **Role:** The first "employee." Operates as the central brain of the Site-as-a-Business. Monitors high-level metrics (traffic, MRR, error rates) and makes strategic decisions.
+* **Special Action - "Hiring":** The CEO Agent operates solo until its task queue or complexity threshold is exceeded (exhaustion). At that point, it has the authority to instantiate and delegate tasks to the specialized agents below.
+* **Instruction Source:** `ROADMAP.md` and `PRD.md`.
+
+### 2. Developer Agent (Codebase & Infrastructure)
 * **Entity:** Claude Code (CLI) / Lovable UI
 * **Role:** Manages the React source code, layout changes, bug fixes, and feature integrations outlined in the project `ROADMAP.md`.
 * **Access:** Full Git/GitHub repository access + Local IDE execution.
 * **Instruction Source:** `CLAUDE.md` and `documents/` directory.
 
-### 2. Database Admin Agent (Backend & Security)
+### 3. Database Admin Agent (Backend & Security)
 * **Entity:** Lovable Cloud AI / Supabase AI
 * **Role:** Constructs database schemas (e.g., countries, sub_regions, profiles), manages Row Level Security (RLS) policies, and handles Edge Functions for backend execution.
 * **Access:** Supabase Dashboard / SQL execution.
 * **Instruction Source:** `documents/DATA_MODEL.md`.
 
-### 3. Programmatic SEO Agent (Content & Growth)
+### 4. Programmatic SEO Agent (Content & Growth)
 * **Entity:** Automated Edge Function / Scheduled CLI Agent
 * **Role:** Continuously scales the directory by programmatically generating long-tail search pages (e.g., "Universal Basic Income in King County, Washington") and localized policy content.
 * **Duties:** 
@@ -28,7 +34,7 @@ The following specialized agents form the operational backbone of PaidToBe:
   - Insert correct JSON-LD schemas and meta tags.
   - Generate structured blog content.
 
-### 4. Intelligence Agent (Data Ingestion)
+### 5. Intelligence Agent (Data Ingestion)
 * **Entity:** Perplexity API Integration + GitHub Actions/Cron
 * **Role:** Autonomously monitors global policy shifts.
 * **Duties:**
@@ -36,7 +42,7 @@ The following specialized agents form the operational backbone of PaidToBe:
   - Parse events and inject new timeline entries to the Supabase database.
   - Ping the Polymarket API to update betting odds on UBI thresholds.
 
-### 5. Engagement Agent (Marketing & Distribution)
+### 6. Engagement Agent (Marketing & Distribution)
 * **Entity:** Mailing List Automation + AI Copywriter
 * **Role:** Manages the premium subscription value pipeline.
 * **Duties:**
