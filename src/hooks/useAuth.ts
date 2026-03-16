@@ -46,8 +46,16 @@ export function useAuth() {
         .eq("id", userId)
         .single();
 
-      if (error) throw error;
-      setProfile(data);
+      if (error) {
+        if (error.code === "PGRST116") {
+          // No record found
+          setProfile(null);
+        } else {
+          throw error;
+        }
+      } else {
+        setProfile(data);
+      }
     } catch (error) {
       console.error("Error fetching profile:", error);
     } finally {
