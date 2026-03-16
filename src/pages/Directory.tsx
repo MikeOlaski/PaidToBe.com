@@ -212,8 +212,7 @@ export default function Directory() {
           </div>
         ) : error ? (
           <div className="py-20 text-center text-destructive">
-            <p>Error loading countries: {error instanceof Error ? error.message : JSON.stringify(error)}</p>
-            <Button variant="outline" className="mt-4" onClick={() => window.location.reload()}>Try again</Button>
+            <p>Error loading countries. Please try again later.</p>
           </div>
         ) : view === "cards" && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
