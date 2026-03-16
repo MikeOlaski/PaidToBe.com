@@ -8,18 +8,20 @@ _Last updated: 2026-03-16_
 
 **Top 3 problems (ranked by severity):**
 
-1. **AI is destroying careers with no playbook for what's next.** 51% of workers fear AI job loss in 2026. Entry-level job listings down 15% while applications up 30%. Freelance labor marketplace spend collapsed from 0.66% to 0.14% of total company spend (2021–2025). People know they're at risk but have no structured way to assess or respond.
+1. **AI is disrupting careers, locations, and identities — simultaneously — with no integrated playbook.** 51% of workers fear AI job loss in 2026. But losing a job isn't just an economic event — it's an identity crisis. University of Florida researchers identified "AI Replacement Dysfunction": insomnia, paranoia, loss of self-worth when algorithms replicate what defined you professionally. People need to re-tool their skills, re-locate to better safety nets, AND re-habit their sense of purpose. Nothing addresses all three.
 
-2. **The "where should I live?" question now has career-risk and safety-net dimensions nobody integrates.** Relocation research requires stitching together 6+ tools (NomadList, Numbeo, government visa sites, expat forums, tax advisors, policy research) — none of which factor in AI displacement risk or post-labor readiness.
+2. **The "where should I live?" question now has career-risk and safety-net dimensions nobody integrates.** Relocation research requires stitching together 6+ tools (NomadList, Numbeo, government visa sites, expat forums, tax advisors, policy research) — none of which factor in AI displacement risk or post-labor readiness. And none help with the emotional/identity dimension of uprooting your life.
 
-3. **The gap between "free risk calculator" and "$2,000+ immigration lawyer" has nothing in it.** Every AI job risk tool is free. Every serious relocation service is $2K+. There is no $10–$50/mo intelligence product that connects career risk to location strategy.
+3. **There is no transformation pathway between "free risk calculator" and "$2,000+ immigration lawyer."** Every AI job risk tool is free but ends at a score — no action plan. Every relocation service jumps to $2K+ consulting. And neither touches the hardest part: rebuilding your sense of who you are. The gap isn't just in pricing — it's in the entire journey from diagnosis to transformation.
 
 **Existing Alternatives:**
-- Will Robots Take My Job (free risk score, no action plan)
-- NomadList ($99–$300 lifetime, no career risk lens)
+- Will Robots Take My Job (free risk score, no action plan, no identity support)
+- NomadList ($99–$300 lifetime, no career risk lens, no transformation)
 - Numbeo/Expatistan (free cost-of-living data, no policy/safety-net angle)
-- LinkedIn Learning / Coursera ($20–$60/mo, generic upskilling, no relocation)
-- Immigration lawyers ($300–$500/hr, one country at a time)
+- LinkedIn Learning / Coursera ($20–$60/mo, generic upskilling, no relocation, no purpose work)
+- Immigration lawyers ($300–$500/hr, one country at a time, no career context)
+- Career coaches ($75–$550/hr, no relocation data, no identity frameworks)
+- Therapy / life coaching (addresses identity but disconnected from career data and relocation intelligence)
 - Reddit threads (cathartic but actionless)
 
 ---
@@ -42,27 +44,33 @@ See `documents/ICP_PROFILES.md` for detailed profiles.
 
 ## 3. UNIQUE VALUE PROPOSITION
 
-**The only platform that connects your AI career risk to where you should live.**
+**The only platform that helps you re-tool your career, re-locate to the right place, and re-habit your identity for the post-labor economy.**
 
-_Single clear message:_ "AI is rewriting the rules of work. We show you your job's risk score, which countries have the strongest safety nets, and how to build a life of abundance — no matter what happens to jobs."
+_Single clear message:_ "AI is rewriting the rules of work. We diagnose your risk, show you where to thrive, and help you transform — because you deserve abundance, not just survival."
 
-_High-concept pitch:_ "NomadList meets Will Robots Take My Job — with an intelligence layer."
+_High-concept pitch:_ "NomadList meets Will Robots Take My Job — with a transformation layer powered by Rehabit."
+
+_The belief underneath:_ We have the resources, technology, and abundance for everyone to have health and happiness. The question isn't scarcity — it's transition. PaidToBe helps you navigate that transition across your career, your location, and your identity.
 
 ---
 
 ## 4. SOLUTION
 
-**Core features mapped to problems:**
+**Three axes of transformation, powered by an ecosystem:**
 
-| Problem | Solution |
-|---------|----------|
-| "Is my job safe?" | AI Displacement Risk Scores for 341+ occupations — risk level, median pay, growth outlook |
-| "Where should I live?" | Country Readiness Scores for 28+ jurisdictions — safety nets, UBI status, visa access, cost of thriving |
-| "What do I do about it?" | AI-powered advisor combining job risk + country data for personalized recommendations |
-| "I need a plan" | Career Adaptation Courses + Migration Playbooks (info products) |
-| "Keep me informed" | Policy change alerts, news intelligence, prediction market odds |
+| User Question | Axis | Solution | Platform |
+|---------------|------|----------|----------|
+| "Is my job safe?" | Job | AI Displacement Risk Scores for 341+ occupations | PaidToBe |
+| "Where should I live?" | Location | Country Readiness Scores for 28+ jurisdictions — safety nets, UBI, visa access, CTI | PaidToBe |
+| "What skills do I need?" | Job × Location | AI-powered advisor + personalized career/location plans | PaidToBe + Lescens |
+| "How do I re-tool and re-skill?" | Job → Transformation | Courses and training delivered by AI agent | Lescens.com |
+| "Who am I becoming?" | Identity | Purpose discovery, identity reframing, habit transformation | Rehabit.ai |
+| "What's this worth to me?" | Value | AI-calculated value of decisions made ($ saved, earned, risk mitigated) — name your price | PayPerValue.com |
+| "Keep me informed" | All | Policy alerts, news intelligence, prediction market odds | PaidToBe |
 
-**The intersection is the product.** No competitor combines the Job Axis with the Location Axis.
+**The data is the diagnosis. The transformation is the product.** PaidToBe creates the "oh shit" moment. The ecosystem delivers the "here's what to do" journey.
+
+_Sequence: Diagnose → Plan → Learn → Transform → Thrive_
 
 ---
 
@@ -95,14 +103,16 @@ _High-concept pitch:_ "NomadList meets Will Robots Take My Job — with an intel
 | **Navigator** | $19/mo or $149/yr | Full occupation data, country deep-dives, AI advisor (limited), policy alerts, weekly digest, community access | Anxious Professional, Displaced Creative |
 | **Strategist** | $49/mo or $399/yr | Unlimited AI advisor, personalized career + location plans, prediction market data, daily intelligence, priority support, 1-on-1 quarterly strategy call | Strategic Relocator, Concerned Parent |
 
-### Info Products (one-time)
+### Info Products — via Lescens.com (one-time, or PayPerValue pricing)
 
-| Product | Price | Description |
-|---------|-------|-------------|
-| Personal Risk Report | $49–$99 | AI-generated deep-dive: your occupation's risk + top 5 countries for you |
-| Career Pivot Playbook | $97–$197 | Course: how to adapt your skills for the AI economy |
-| Migration Intelligence Report | $149–$299 | Personalized: visa pathways, cost analysis, timeline for your target countries |
-| Family Future Plan | $199–$499 | Comprehensive: career outlook for multiple fields + family relocation strategy |
+| Product | Fixed Price | PayPerValue Option | Delivered By |
+|---------|------------|-------------------|--------------|
+| Personal Risk Report | $49–$99 | "This report identified $X in potential savings — pay what it's worth" | PaidToBe AI |
+| Career Pivot Playbook | $97–$197 | Based on salary delta of target career | Lescens.com |
+| Migration Intelligence Report | $149–$299 | Based on COL savings at target country over 5–10 years | PaidToBe AI |
+| "Who Am I Now?" Workshop | $97–$197 | — | Rehabit.ai |
+| Family Future Plan | $199–$499 | Based on education cost savings + relocation value | PaidToBe + Lescens |
+| 1-on-1 Strategy Session | $200–$500 | — | Human + AI |
 
 ### Future Revenue (Phase 4+)
 
@@ -110,6 +120,8 @@ _High-concept pitch:_ "NomadList meets Will Robots Take My Job — with an intel
 - Enterprise/institutional subscriptions ($5K–$50K/yr)
 - Referral/affiliate (immigration services, relocation providers)
 - Prediction market integration (Polymarket partnership or own market)
+- Lescens course marketplace (rev share on third-party career/migration courses)
+- PayPerValue processing fees on value-based transactions across ecosystem
 
 ### Revenue Model Math
 
@@ -155,7 +167,7 @@ _Note: Info product revenue is additive. At scale, courses/reports could equal o
 | **NPS** | Product-market fit | 40+ |
 | **Pages per Session** | Engagement depth (Job → Country crossover) | 4+ |
 
-**North Star Metric:** _Crossover Actions_ — how many users go from checking their job risk score to exploring countries (or vice versa). This measures the unique value proposition.
+**North Star Metric:** _Transformation Intent Signals_ — how many users move beyond data consumption into action: crossover from Job → Country (or reverse), clicking through to Lescens courses, engaging with identity/purpose content, or purchasing a transformation product. Pure data pageviews don't count — action does.
 
 ---
 
@@ -163,15 +175,19 @@ _Note: Info product revenue is additive. At scale, courses/reports could equal o
 
 **What cannot be easily copied or bought:**
 
-1. **Two-axis data integration.** Competitors have career risk OR relocation data. PaidToBe has both, cross-referenced. Rebuilding 341 occupation scores × 28+ country profiles × policy tracking × the analytical layer connecting them is a significant moat.
+1. **Three-axis integration that nobody else has.** Competitors have career risk OR relocation data OR identity coaching — never all three connected. The diagnostic data can be replicated; the transformation journey across all three axes cannot.
 
-2. **First-mover in a category that doesn't exist yet.** "Post-labor intelligence platform" is not a recognized category. PaidToBe defines it. The first credible player to name and own a category has an outsized brand advantage.
+2. **An ecosystem, not a tool.** PaidToBe + Lescens + PayPerValue + Rehabit form a closed loop: diagnose → learn → price fairly → transform. A competitor would need to build four interconnected platforms to match this. Data is commodifiable; ecosystems are not.
 
-3. **Community-contributed intelligence.** As users share relocation experiences, career pivot outcomes, and local policy updates, the platform gets smarter. This creates a network effect competitors can't replicate without the same community.
+3. **First-mover in a category that doesn't exist yet.** "Post-labor transformation platform" is not a recognized category. PaidToBe defines it. The first credible player to name and own a category has an outsized brand advantage.
 
 4. **Proprietary indices.** The Cost of Thriving Index (CTI), Post-Labor Readiness Scores, and AI Displacement Risk methodology become citable, embeddable, and trusted — like how Numbeo owns "cost of living" or Glassdoor owns "company reviews."
 
-5. **Mission-driven brand.** "You deserve to thrive — not because of what you produce, but because you exist." This philosophical positioning attracts a community, not just users. Communities are defensible; user bases are not.
+5. **Mission-driven brand rooted in a philosophical position.** "You deserve to thrive — not because of what you produce, but because you exist." This isn't marketing copy — it's a worldview that PaidToBe operationalizes with data and Rehabit operationalizes with transformation. This attracts a movement, not just users. Movements are the strongest moat.
+
+6. **Community-contributed intelligence.** As users share relocation experiences, career pivot outcomes, identity transformation stories, and local policy updates, the platform improves with use. Network effects compound across all three axes.
+
+7. **PayPerValue as a trust signal.** Letting users name their price based on demonstrated value is a radical transparency play that builds trust faster than fixed pricing. It also self-selects high-value users who pay more because they received more.
 
 ---
 
@@ -180,6 +196,25 @@ _Note: Info product revenue is additive. At scale, courses/reports could equal o
 _Riskiest assumptions to test first (Ash Maurya's recommended order):_
 
 1. **Do people actually cross from Job → Country (or vice versa)?** If users only use one axis, the UVP breaks. Test with analytics on the MVP.
-2. **Will the Anxious Professional pay $19/mo for ongoing intelligence?** This is the volume ICP. Run a landing page test with email capture before building payment.
-3. **Can AI advisor quality justify the premium tier?** The $49/mo Strategist tier depends on the advisor being genuinely useful, not a glorified chatbot.
-4. **Is "post-labor readiness" a concept people search for?** SEO keyword validation — do real queries exist, or does the category need to be created through content marketing?
+2. **Does the "oh shit" moment from a risk score drive demand for transformation — not just more data?** If users want a better spreadsheet, this is a data business. If they want to change their life, this is a transformation business. Test by offering a transformation product (even a simple one) early.
+3. **Will the Anxious Professional pay $19/mo for ongoing intelligence?** This is the volume ICP. Run a landing page test with email capture before building payment.
+4. **Does the Rehabit/identity angle resonate, or is it too "soft" for data-driven users?** Test by adding identity/purpose language to job risk pages and measuring engagement vs. pure-data versions.
+5. **Can AI advisor quality justify the premium tier?** The $49/mo Strategist tier depends on the advisor being genuinely useful, not a glorified chatbot.
+6. **Will people pay more through PayPerValue than fixed pricing?** The value-based model is a hypothesis — test with a single info product before building the full platform.
+7. **Is "post-labor readiness" a concept people search for?** SEO keyword validation — do real queries exist, or does the category need to be created through content marketing?
+
+---
+
+## ECOSYSTEM REFERENCE
+
+This Lean Canvas describes PaidToBe as the front door of a 4-platform ecosystem:
+
+| Platform | Role | Status |
+|----------|------|--------|
+| **PaidToBe.com** | Diagnosis engine — free tools, intelligence, AI advisor | MVP live |
+| **Lescens.com** | Training delivery — AI-powered courses for re-tooling and re-skilling | Planned |
+| **PayPerValue.com** | Pricing engine — AI-calculated value, user names their price | Planned |
+| **Rehabit.ai** | Transformation engine — identity, purpose, habits | Separate venture, active |
+
+See `documents/INTEGRATION_ROADMAP.md` for ecosystem architecture and phasing.
+See `documents/PRODUCT_VISION.md` for the three-axis model and revenue architecture.
