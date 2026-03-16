@@ -15,6 +15,7 @@ import Rankings from "./pages/Rankings";
 import Membership from "./pages/Membership";
 import About from "./pages/About";
 import AboutUs from "./pages/AboutUs";
+import Auth from "./pages/Auth";
 import Policies from "./pages/Policies";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/membership" element={<Membership />} />
           <Route path="/about" element={<About />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="/policies" element={<Policies />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
