@@ -41,6 +41,7 @@ _Target: Phase 2 + 2 weeks_
 _Target: Phase 3 + 3 weeks_
 
 - [ ] Polymarket integration (prediction odds per country)
+  - Build/integrate a market betting on when a country's UBI distributions will reach 10x their median Cost of Living (or another quantifiable threshold metric).
 - [ ] Odds change alerts for premium members
 - [ ] Policy influence hub (petitions, civic engagement links)
 - [ ] Community forum or discussion threads per country

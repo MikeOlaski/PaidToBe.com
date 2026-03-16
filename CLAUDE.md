@@ -41,6 +41,13 @@ Detailed project contexts are located in the `documents/` directory. When making
    - Hooks in `src/hooks/`
    - Utilities in `src/lib/`
 
+## Git Protocol & Syncing
+Since this project is co-developed with Lovable (a real-time AI web editor), keeping local tools (like Claude) and Lovable in sync requires strict Git discipline:
+1. **Always Pull:** Before starting new work, ensure the local environment has the latest code by pulling from `origin/main` (Lovable pushes changes directly to GitHub).
+2. **Always Push:** Code generated or modified locally by Claude must be committed and pushed immediately. This is the only way for Lovable to see and render the changes.
+3. **Commit Convention:** Write semantic, clear commit messages (e.g., `feat: Update CountryDetail layout`, `fix: Typo in stats widget`).
+4. **Resolution:** If merge conflicts happen, resolve them locally keeping the "best of both worlds" before force-pushing or merging.
+
 ## Workflows
 - Always verify tests (`npm run test`) and linter (`npm run lint`) after significant changes.
 - Update `documents/CHANGELOG.md` when completing major features.
