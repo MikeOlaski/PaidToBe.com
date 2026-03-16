@@ -55,6 +55,7 @@ _Target: Ongoing_
 - [ ] Add autonomous jurisdictions (Scotland, Catalonia, Hong Kong, etc.)
 - [ ] Interactive world map visualization
 - [ ] SEO optimization (JSON-LD, meta tags, OG images per country)
+- [ ] Autonomous Agents for Programmatic SEO (at-scale automated content generation for edge cases, hyper-local pages, and long-tail query capture)
 - [ ] Newsletter/blog for editorial content
 - [ ] Referral program for members
 - [ ] API access for researchers (premium tier)
