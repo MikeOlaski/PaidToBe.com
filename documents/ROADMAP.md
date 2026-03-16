@@ -50,7 +50,8 @@ _Target: Phase 3 + 3 weeks_
 ## Phase 5: Growth & Scale 🔲
 _Target: Ongoing_
 
-- [ ] Expand to 195+ countries
+- [ ] Comprehensive Global Database: Represent every single country (195+) in the database
+- [ ] Sub-national Granularity: Normalize and tie data to states, provinces, and counties for localized intelligence
 - [ ] Add autonomous jurisdictions (Scotland, Catalonia, Hong Kong, etc.)
 - [ ] Interactive world map visualization
 - [ ] SEO optimization (JSON-LD, meta tags, OG images per country)

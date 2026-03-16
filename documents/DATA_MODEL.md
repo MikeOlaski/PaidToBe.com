@@ -65,6 +65,19 @@ type UBIStatus = "Active Pilot" | "Proposed" | "Exploring" | "None";
 ### `countries` table
 All Country fields mapped to columns. `id` as primary key (text slug).
 
+### `sub_regions` table (Phase 5 - County/State Granularity)
+Used for normalizing data tied to specific counties, provinces, and states.
+```sql
+id                 uuid PRIMARY KEY DEFAULT gen_random_uuid()
+country_id         text REFERENCES countries(id) ON DELETE CASCADE
+name               text NOT NULL  -- e.g. "California", "Bavaria", "King County"
+type               text NOT NULL  -- "State", "Province", "County"
+cost_of_living     numeric
+ubi_status         text
+readiness_score    numeric
+created_at         timestamptz DEFAULT now()
+```
+
 ### `profiles` table
 ```sql
 id          uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE
