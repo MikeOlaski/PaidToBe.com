@@ -3,12 +3,24 @@ import { ArrowLeft, Calendar, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { blogPosts } from "@/data/blog";
-import { countries } from "@/data/countries";
+import { useCountries } from "@/hooks/useCountries";
 import { policies } from "@/data/policies";
 
 export default function BlogPost() {
   const { id } = useParams<{ id: string }>();
+  const { data: countries = [], isLoading } = useCountries();
   const post = blogPosts.find((p) => p.id === id);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-accent border-t-transparent"></div>
+      </div>
+    );
+  }
+
+  const relatedCountries = post.countryIds.map((id) => countries.find((c) => c.id === id)).filter(Boolean);
+  const relatedPolicies = post.policyIds.map((id) => policies.find((p) => p.id === id)).filter(Boolean);
 
   if (!post) {
     return (
@@ -18,9 +30,6 @@ export default function BlogPost() {
       </div>
     );
   }
-
-  const relatedCountries = post.countryIds.map((id) => countries.find((c) => c.id === id)).filter(Boolean);
-  const relatedPolicies = post.policyIds.map((id) => policies.find((p) => p.id === id)).filter(Boolean);
 
   return (
     <div className="min-h-screen py-8">

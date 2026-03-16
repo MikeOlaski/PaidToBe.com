@@ -3,6 +3,7 @@ import { ArrowRight, BookOpen, Compass, Sparkles, TrendingUp, Shield, Users, Sta
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { useCountries } from "@/hooks/useCountries";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -47,13 +48,6 @@ const guides = [
   },
 ];
 
-const proofPoints = [
-  { value: "28+", label: "Jurisdictions tracked" },
-  { value: "342", label: "Occupations analyzed" },
-  { value: "60+", label: "Policy events logged" },
-  { value: "$0→∞", label: "Earning paths mapped" },
-];
-
 const testimonials = [
   {
     quote: "I never thought about my career as something with an expiration date. This changed everything.",
@@ -70,6 +64,15 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const { data: countries = [] } = useCountries();
+  
+  const proofPoints = [
+    { value: `${countries.length > 0 ? countries.length : "28"}+`, label: "Jurisdictions tracked" },
+    { value: "342", label: "Occupations analyzed" },
+    { value: "60+", label: "Policy events logged" },
+    { value: "$0→∞", label: "Earning paths mapped" },
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero — aspirational, big promise */}
@@ -175,7 +178,7 @@ export default function Home() {
               {
                 icon: Users,
                 title: "Borders are leverage",
-                desc: "28+ countries are building safety nets. Where you live will determine your floor.",
+                desc: `${countries.length > 0 ? countries.length : "28"}+ countries are building safety nets. Where you live will determine your floor.`,
               },
               {
                 icon: Star,
@@ -307,7 +310,7 @@ export default function Home() {
                   Data-driven decisions for your future
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Explore our open-access directory of 28+ countries scored on
+                  Explore our open-access directory of {countries.length > 0 ? countries.length : "28"}+ countries scored on
                   post-labor readiness, browse 342 occupations with AI exposure
                   analysis, and track policy changes in real time.
                 </p>
@@ -367,7 +370,7 @@ export default function Home() {
             <p className="mt-4 text-lg opacity-85 leading-relaxed">
               Join thousands of forward-thinkers getting weekly intelligence on
               AI disruption, global policy shifts, and strategies to thrive in
-              the post-labor economy.
+              the post-labor economy from {countries.length > 0 ? countries.length : "28"}+ jurisdictions.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link to="/membership">

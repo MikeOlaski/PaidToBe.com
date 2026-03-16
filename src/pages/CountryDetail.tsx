@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { countries } from "@/data/countries";
+import { useCountry } from "@/hooks/useCountries";
 import { motion } from "framer-motion";
 
 function ScoreBar({ label, score, color = "bg-primary" }: { label: string; score: number; color?: string }) {
@@ -23,7 +23,15 @@ function ScoreBar({ label, score, color = "bg-primary" }: { label: string; score
 
 export default function CountryDetail() {
   const { id } = useParams<{ id: string }>();
-  const country = countries.find((c) => c.id === id);
+  const { data: country, isLoading } = useCountry(id);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background">
+        <div className="h-12 w-12 animate-spin rounded-full border-4 border-accent border-t-transparent"></div>
+      </div>
+    );
+  }
 
   if (!country) {
     return (

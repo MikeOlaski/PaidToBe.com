@@ -9,7 +9,8 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Search, SlidersHorizontal, LayoutGrid, List, TableIcon, Clock } from "lucide-react";
 import CountryCard from "@/components/CountryCard";
 import GanttTimeline from "@/components/GanttTimeline";
-import { countries, regions, ubiStatuses, type Region, type UBIStatus, type Country } from "@/data/countries";
+import { regions, ubiStatuses, type Region, type UBIStatus, type Country } from "@/data/countries";
+import { useCountries } from "@/hooks/useCountries";
 
 type SortKey = "readinessScore" | "gdpPerCapita" | "policyMomentum" | "name";
 type ViewMode = "cards" | "list" | "table" | "timeline";
@@ -81,6 +82,7 @@ export default function Directory() {
   const [sortBy, setSortBy] = useState<SortKey>("readinessScore");
   const [showFilters, setShowFilters] = useState(false);
   const [view, setView] = useState<ViewMode>("cards");
+  const { data: countries = [], isLoading, error } = useCountries();
 
   const filtered = useMemo(() => {
     let list = [...countries];
@@ -204,7 +206,15 @@ export default function Directory() {
         </div>
 
         {/* ─── Cards View ─── */}
-        {view === "cards" && (
+        {isLoading ? (
+          <div className="flex items-center justify-center py-20">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-accent border-t-transparent"></div>
+          </div>
+        ) : error ? (
+          <div className="py-20 text-center text-destructive">
+            <p>Error loading countries. Please try again later.</p>
+          </div>
+        ) : view === "cards" && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((c) => <CountryCard key={c.id} country={c} />)}
           </div>

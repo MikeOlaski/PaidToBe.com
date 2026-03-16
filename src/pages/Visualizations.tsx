@@ -4,7 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { countries, regions, type Region } from "@/data/countries";
+import { regions, type Region } from "@/data/countries";
+import { useCountries } from "@/hooks/useCountries";
 import { policies } from "@/data/policies";
 import { TrendingUp, DollarSign, BarChart3, Target } from "lucide-react";
 
@@ -13,6 +14,7 @@ type ChartView = "thriving" | "cash" | "readiness" | "policies";
 export default function Visualizations() {
   const [view, setView] = useState<ChartView>("thriving");
   const [regionFilter, setRegionFilter] = useState<Region | "all">("all");
+  const { data: countries = [], isLoading } = useCountries();
 
   const filtered = useMemo(() => {
     let list = [...countries];
@@ -33,6 +35,14 @@ export default function Visualizations() {
       totalCount: p.countriesActive.length + p.countriesProposed.length,
     })).sort((a, b) => b.totalCount - a.totalCount);
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-accent border-t-transparent"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen py-10">

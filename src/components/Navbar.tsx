@@ -8,6 +8,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { LogOut, Settings, User as UserIcon } from "lucide-react";
 
 const navItems = [
   { label: "Jobs Directory", path: "/jobs" },
@@ -19,6 +21,7 @@ const navItems = [
 export default function Navbar() {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { user, profile, isAdmin, signOut } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -53,9 +56,42 @@ export default function Navbar() {
               </Button>
             </Link>
           ))}
-          <Link to="/membership">
-            <Button size="sm" className="ml-2 bg-accent text-accent-foreground hover:bg-accent/90">Join Now</Button>
-          </Link>
+          {isAdmin && (
+            <Link to="/admin">
+              <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} size="sm" className="text-sm font-medium gap-1 text-accent">
+                <Settings className="h-4 w-4" /> Admin
+              </Button>
+            </Link>
+          )}
+          {user ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="ml-2 gap-2">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/20 text-[10px] font-bold text-accent">
+                    {profile?.full_name?.charAt(0) || user.email?.charAt(0).toUpperCase()}
+                  </div>
+                  <ChevronDown className="h-3 w-3" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem className="text-xs font-medium text-muted-foreground px-2 py-1.5 uppercase tracking-wider">
+                  {profile?.full_name || user.email}
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/membership" className="flex items-center gap-2">
+                    <UserIcon className="h-4 w-4" /> Account
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => signOut()} className="text-destructive flex items-center gap-2">
+                  <LogOut className="h-4 w-4" /> Logout
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <Link to="/auth">
+              <Button size="sm" className="ml-2 bg-accent text-accent-foreground hover:bg-accent/90">Sign In</Button>
+            </Link>
+          )}
         </nav>
         <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -81,9 +117,20 @@ export default function Navbar() {
                 <Button variant={location.pathname === item.path ? "secondary" : "ghost"} className="w-full justify-start">{item.label}</Button>
               </Link>
             ))}
-            <Link to="/membership" onClick={() => setMobileOpen(false)}>
-              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Join Now</Button>
-            </Link>
+            {isAdmin && (
+              <Link to="/admin" onClick={() => setMobileOpen(false)}>
+                <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} className="w-full justify-start text-accent">Admin Dashboard</Button>
+              </Link>
+            )}
+            {user ? (
+              <Button variant="ghost" className="w-full justify-start text-destructive" onClick={() => { signOut(); setMobileOpen(false); }}>
+                Logout
+              </Button>
+            ) : (
+              <Link to="/auth" onClick={() => setMobileOpen(false)}>
+                <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Sign In</Button>
+              </Link>
+            )}
           </nav>
         </div>
       )}

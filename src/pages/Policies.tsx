@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { policies, policyCategories, type PolicyCategory } from "@/data/policies";
-import { countries } from "@/data/countries";
+import { useCountries } from "@/hooks/useCountries";
 import { Search, Users, DollarSign, Briefcase, Layers, ArrowRight } from "lucide-react";
 
 const categoryIcons: Record<PolicyCategory, typeof DollarSign> = {
@@ -25,6 +25,7 @@ const statusColor = (status: string) => {
 export default function Policies() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<PolicyCategory | "all">("all");
+  const { data: countries = [], isLoading } = useCountries();
 
   const filtered = useMemo(() => {
     let list = [...policies];
@@ -35,6 +36,14 @@ export default function Policies() {
     if (selectedCategory !== "all") list = list.filter((p) => p.category === selectedCategory);
     return list;
   }, [search, selectedCategory]);
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-accent border-t-transparent"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen py-10">

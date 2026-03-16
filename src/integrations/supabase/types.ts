@@ -123,6 +123,7 @@ export type Database = {
           email: string | null
           full_name: string | null
           membership: string | null
+          role: string | null
           stripe_customer_id: string | null
           created_at: string
         }
@@ -131,6 +132,7 @@ export type Database = {
           email?: string | null
           full_name?: string | null
           membership?: string | null
+          role?: string | null
           stripe_customer_id?: string | null
           created_at?: string
         }
@@ -139,6 +141,7 @@ export type Database = {
           email?: string | null
           full_name?: string | null
           membership?: string | null
+          role?: string | null
           stripe_customer_id?: string | null
           created_at?: string
         }

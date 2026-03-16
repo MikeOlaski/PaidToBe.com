@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { countries, type Country } from "@/data/countries";
+import { type Country } from "@/data/countries";
+import { useCountries } from "@/hooks/useCountries";
 
 type SortField = "readinessScore" | "safetyNetStrength" | "economicCapacity" | "politicalWill" | "expatAccessibility" | "policyMomentum";
 
@@ -70,6 +71,7 @@ function ComparePanel({ selected, countries: allCountries, onRemove }: { selecte
 export default function Rankings() {
   const [sortBy, setSortBy] = useState<SortField>("readinessScore");
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const { data: countries = [], isLoading } = useCountries();
 
   const sorted = useMemo(() => {
     return [...countries].sort((a, b) => b[sortBy] - a[sortBy]);
@@ -80,6 +82,14 @@ export default function Rankings() {
       prev.includes(id) ? prev.filter((x) => x !== id) : prev.length < 3 ? [...prev, id] : prev
     );
   };
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-accent border-t-transparent"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen py-10">

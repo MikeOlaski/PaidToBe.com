@@ -2,20 +2,21 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Globe, Shield, TrendingUp, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { countries } from "@/data/countries";
 import CountryCard from "@/components/CountryCard";
+import { useCountries } from "@/hooks/useCountries";
 import { motion } from "framer-motion";
 
-const stats = [
-  { label: "Jurisdictions Tracked", value: "28+", icon: Globe },
-  { label: "Active UBI Pilots", value: "8", icon: Zap },
-  { label: "Policy Events Logged", value: "60+", icon: TrendingUp },
-  { label: "Regions Covered", value: "6", icon: Shield },
-];
-
-const topCountries = [...countries].sort((a, b) => b.readinessScore - a.readinessScore).slice(0, 6);
-
 export default function Index() {
+  const { data: countries = [], isLoading } = useCountries();
+
+  const stats = [
+    { label: "Jurisdictions Tracked", value: `${countries.length}+`, icon: Globe },
+    { label: "Active UBI Pilots", value: countries.filter(c => c.ubiStatus === "Active Pilot").length.toString(), icon: Zap },
+    { label: "Policy Events Logged", value: "60+", icon: TrendingUp },
+    { label: "Regions Covered", value: new Set(countries.map(c => c.region)).size.toString(), icon: Shield },
+  ];
+
+  const topCountries = [...countries].sort((a, b) => b.readinessScore - a.readinessScore).slice(0, 6);
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -129,9 +130,15 @@ export default function Index() {
             </Link>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {topCountries.map((c) => (
-              <CountryCard key={c.id} country={c} />
-            ))}
+            {isLoading ? (
+              Array.from({ length: 3 }).map((_, i) => (
+                <div key={i} className="h-[200px] rounded-lg border bg-card animate-pulse" />
+              ))
+            ) : (
+              topCountries.map((c) => (
+                <CountryCard key={c.id} country={c} />
+              ))
+            )}
           </div>
           <div className="mt-8 text-center md:hidden">
             <Link to="/directory">
