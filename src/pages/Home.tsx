@@ -101,11 +101,11 @@ export default function Home() {
             <motion.p
               custom={2}
               variants={fadeUp}
-              className="mt-6 text-lg leading-relaxed opacity-85 md:text-xl"
+              className="mt-6 text-lg leading-relaxed opacity-85 [text-wrap:pretty]"
             >
               AI is rewriting the rules of work. We give you the intelligence,
               strategies, and global policy insights to stay ahead — and build a
-              life of abundance on your own terms.
+              life of real abundance on your own terms.
             </motion.p>
             <motion.div
               custom={3}
