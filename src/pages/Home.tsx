@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { useCountries } from "@/hooks/useCountries";
+import { useWaitlist } from "@/contexts/WaitlistContext";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -65,6 +66,7 @@ const testimonials = [
 
 export default function Home() {
   const { data: countries = [] } = useCountries();
+  const { open: openWaitlist } = useWaitlist();
   
   const proofPoints = [
     { value: `${countries.length > 0 ? countries.length : "28"}+`, label: "Jurisdictions tracked" },
@@ -112,23 +114,21 @@ export default function Home() {
               variants={fadeUp}
               className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
             >
-              <Link to="/membership">
-                <Button
-                  size="lg"
-                  className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 h-12"
-                >
-                  Get Early Access <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link to="/directory">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="text-base px-8 h-12"
-                >
-                  Explore the Data
-                </Button>
-              </Link>
+              <Button
+                size="lg"
+                onClick={() => openWaitlist("hero-get-early-access")}
+                className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 h-12"
+              >
+                Get Early Access <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                onClick={() => openWaitlist("hero-explore-data")}
+                className="text-base px-8 h-12"
+              >
+                Explore the Data
+              </Button>
             </motion.div>
           </motion.div>
         </div>
@@ -245,18 +245,17 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="shrink-0">
-                      <Link to={guide.href}>
-                        <Button
-                          variant={guide.accent ? "default" : "outline"}
-                          className={
-                            guide.accent
-                              ? "bg-accent text-accent-foreground hover:bg-accent/90"
-                              : ""
-                          }
-                        >
-                          {guide.cta} <ChevronRight className="ml-1 h-4 w-4" />
-                        </Button>
-                      </Link>
+                      <Button
+                        variant={guide.accent ? "default" : "outline"}
+                        onClick={() => openWaitlist(`guide-${guide.badge.toLowerCase().replace(" ", "-")}`)}
+                        className={
+                          guide.accent
+                            ? "bg-accent text-accent-foreground hover:bg-accent/90"
+                            : ""
+                        }
+                      >
+                        {guide.cta} <ChevronRight className="ml-1 h-4 w-4" />
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -373,14 +372,13 @@ export default function Home() {
               the post-labor economy from {countries.length > 0 ? countries.length : "28"}+ jurisdictions.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link to="/membership">
-                <Button
-                  size="lg"
-                  className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 h-12"
-                >
-                  Join the Movement <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
+              <Button
+                size="lg"
+                onClick={() => openWaitlist("cta-join-movement")}
+                className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8 h-12"
+              >
+                Join the Movement <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
             </div>
             <p className="mt-4 text-sm opacity-60">
               Free tier available · No credit card required

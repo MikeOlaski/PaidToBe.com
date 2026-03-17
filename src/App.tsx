@@ -3,8 +3,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WaitlistModal from "@/components/WaitlistModal";
+import { WaitlistProvider } from "@/contexts/WaitlistContext";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Directory from "./pages/Directory";
@@ -25,11 +28,22 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const [waitlistSource, setWaitlistSource] = useState<string | undefined>();
+
+  function openWaitlist(source?: string) {
+    setWaitlistSource(source);
+    setWaitlistOpen(true);
+  }
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <WaitlistProvider onOpen={openWaitlist}>
+      <WaitlistModal open={waitlistOpen} source={waitlistSource} onClose={() => setWaitlistOpen(false)} />
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -54,8 +68,10 @@ const App = () => (
         </Routes>
         <Footer />
       </BrowserRouter>
+      </WaitlistProvider>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
