@@ -41,7 +41,7 @@ const guides = [
     badge: "Pillar Post",
     title: "The God-Given Right to Thrive",
     description:
-      "You deserve to thrive — not because of what you produce, but because you exist. The moral, economic, and practical case for universal prosperity in the age of abundance.",
+      "You deserve to thrive — not because of what you produce, but because you exist. The moral, economic, and practical case for universal prosperity in an age of abundance.",
     cta: "Read the Manifesto",
     href: "/blog",
     accent: false,
@@ -93,7 +93,7 @@ export default function Home() {
             <motion.h1
               custom={1}
               variants={fadeUp}
-              className="font-serif text-4xl font-bold leading-[1.1] md:text-6xl lg:text-7xl"
+              className="font-serif text-4xl font-bold leading-[1.1] md:text-6xl lg:text-7xl [text-wrap:balance]"
             >
               You deserve to thrive —{" "}
               <span className="text-accent">no matter what happens to jobs.</span>
@@ -159,7 +159,7 @@ export default function Home() {
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
             <Badge variant="secondary" className="mb-4">The Problem</Badge>
-            <h2 className="font-serif text-3xl font-bold md:text-4xl">
+            <h2 className="font-serif text-3xl font-bold md:text-4xl [text-wrap:balance]">
               Most people aren't preparing for what's coming.
             </h2>
             <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
@@ -206,9 +206,9 @@ export default function Home() {
       {/* Featured Guides — the info products */}
       <section className="bg-surface py-20 md:py-28">
         <div className="container">
-          <div className="mx-auto mb-14 max-w-2xl text-center">
+          <div className="mx-auto mb-10 max-w-2xl text-center">
             <Badge variant="secondary" className="mb-4">Essential Reading</Badge>
-            <h2 className="font-serif text-3xl font-bold md:text-4xl">
+            <h2 className="font-serif text-3xl font-bold md:text-4xl [text-wrap:balance]">
               Three guides to change how you think about your future
             </h2>
           </div>
@@ -270,7 +270,7 @@ export default function Home() {
       <section className="py-20">
         <div className="container">
           <div className="mx-auto mb-12 max-w-xl text-center">
-            <h2 className="font-serif text-2xl font-bold md:text-3xl">
+            <h2 className="font-serif text-2xl font-bold md:text-3xl [text-wrap:balance]">
               People are already rethinking their futures
             </h2>
           </div>
@@ -306,7 +306,7 @@ export default function Home() {
             <div className="grid gap-8 md:grid-cols-2">
               <div>
                 <Badge variant="secondary" className="mb-4">Free Tools</Badge>
-                <h2 className="font-serif text-2xl font-bold md:text-3xl">
+                <h2 className="font-serif text-2xl font-bold md:text-3xl [text-wrap:balance]">
                   Data-driven decisions for your future
                 </h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
