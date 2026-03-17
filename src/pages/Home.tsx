@@ -121,14 +121,15 @@ export default function Home() {
               >
                 Get Early Access <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => openWaitlist("hero-explore-data")}
-                className="text-base px-8 h-12"
-              >
-                Explore the Data
-              </Button>
+              <Link to="/directory">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="text-base px-8 h-12"
+                >
+                  Explore the Data
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -245,17 +246,18 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="shrink-0">
-                      <Button
-                        variant={guide.accent ? "default" : "outline"}
-                        onClick={() => openWaitlist(`guide-${guide.badge.toLowerCase().replace(" ", "-")}`)}
-                        className={
-                          guide.accent
-                            ? "bg-accent text-accent-foreground hover:bg-accent/90"
-                            : ""
-                        }
-                      >
-                        {guide.cta} <ChevronRight className="ml-1 h-4 w-4" />
-                      </Button>
+                      <Link to={guide.href}>
+                        <Button
+                          variant={guide.accent ? "default" : "outline"}
+                          className={
+                            guide.accent
+                              ? "bg-accent text-accent-foreground hover:bg-accent/90"
+                              : ""
+                          }
+                        >
+                          {guide.cta} <ChevronRight className="ml-1 h-4 w-4" />
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>

@@ -3,6 +3,7 @@ import { Check, ArrowRight, Star, Zap, Shield, BookOpen, Map, Brain } from "luci
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useWaitlist } from "@/contexts/WaitlistContext";
 
 // Included products shown in Strategist tier
 const includedProducts = [
@@ -99,6 +100,7 @@ const plans = [
 
 export default function Membership() {
   const [isAnnual, setIsAnnual] = useState(true);
+  const { open: openWaitlist } = useWaitlist();
 
   return (
     <div className="min-h-screen py-16">
@@ -231,6 +233,7 @@ export default function Membership() {
                     }`}
                     variant={plan.popular ? "default" : "outline"}
                     size="lg"
+                    onClick={() => openWaitlist(`membership-${plan.name.toLowerCase()}`)}
                   >
                     {plan.cta} <ArrowRight className="ml-1 h-4 w-4" />
                   </Button>
@@ -309,7 +312,7 @@ export default function Membership() {
           <p className="mt-1 font-serif text-lg font-semibold">
             Explorer is free forever — no credit card, no trial clock.
           </p>
-          <Button variant="outline" className="mt-4" size="lg">
+          <Button variant="outline" className="mt-4" size="lg" onClick={() => openWaitlist("membership-explorer-bottom")}>
             Start with Explorer <ArrowRight className="ml-1 h-4 w-4" />
           </Button>
         </div>
