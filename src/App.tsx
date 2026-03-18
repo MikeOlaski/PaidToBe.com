@@ -24,6 +24,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Visualizations from "./pages/Visualizations";
 import Admin from "./pages/Admin";
+import Companies from "./pages/Companies";
+import Vision from "./pages/Vision";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -53,6 +55,8 @@ const App = () => {
           <Route path="/directory" element={<Directory />} />
           <Route path="/country/:id" element={<CountryDetail />} />
           <Route path="/jobs" element={<JobsDirectory />} />
+          <Route path="/companies" element={<Companies />} />
+          <Route path="/vision" element={<Vision />} />
           <Route path="/a/:slug" element={<JobDetail />} />
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/membership" element={<Membership />} />
