@@ -74,11 +74,24 @@ export default function Navbar() {
             </Link>
           ))}
           {isAdmin && (
-            <Link to="/admin">
-              <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} size="sm" className="text-sm font-medium gap-1 text-accent">
-                <Settings className="h-4 w-4" /> Admin
-              </Button>
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant={location.pathname.startsWith("/admin") ? "secondary" : "ghost"} size="sm" className="text-sm font-medium gap-1 text-accent">
+                  <Settings className="h-4 w-4" /> Admin <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild>
+                  <Link to="/admin" className="w-full cursor-pointer">Control Panel</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/admin/health" className="w-full cursor-pointer">Business Health</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/admin/agent" className="w-full cursor-pointer">Agent CEO — Tobe</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           )}
           {user ? (
             <DropdownMenu>
@@ -140,9 +153,18 @@ export default function Navbar() {
               </Link>
             ))}
             {isAdmin && (
-              <Link to="/admin" onClick={() => setMobileOpen(false)}>
-                <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} className="w-full justify-start text-accent">Admin Dashboard</Button>
-              </Link>
+              <div className="flex flex-col gap-1 px-4 py-2 border-l-2 ml-2">
+                <div className="text-[10px] font-bold mb-1 text-muted-foreground uppercase tracking-widest text-accent">Admin</div>
+                <Link to="/admin" onClick={() => setMobileOpen(false)}>
+                  <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Control Panel</Button>
+                </Link>
+                <Link to="/admin/health" onClick={() => setMobileOpen(false)}>
+                  <Button variant={location.pathname === "/admin/health" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Business Health</Button>
+                </Link>
+                <Link to="/admin/agent" onClick={() => setMobileOpen(false)}>
+                  <Button variant={location.pathname === "/admin/agent" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Agent CEO — Tobe</Button>
+                </Link>
+              </div>
             )}
             {user ? (
               <Button variant="ghost" className="w-full justify-start text-destructive" onClick={() => { signOut(); setMobileOpen(false); }}>

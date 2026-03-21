@@ -24,6 +24,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Visualizations from "./pages/Visualizations";
 import Admin from "./pages/Admin";
+import BusinessHealth from "./pages/BusinessHealth";
+import AgentCEO from "./pages/AgentCEO";
 import Companies from "./pages/Companies";
 import Vision from "./pages/Vision";
 import NotFound from "./pages/NotFound";
@@ -68,6 +70,8 @@ const App = () => {
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/visualizations" element={<Visualizations />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/health" element={<BusinessHealth />} />
+          <Route path="/admin/agent" element={<AgentCEO />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
