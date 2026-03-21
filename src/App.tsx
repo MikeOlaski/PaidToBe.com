@@ -24,6 +24,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Visualizations from "./pages/Visualizations";
 import Admin from "./pages/Admin";
+import BusinessHealth from "./pages/BusinessHealth";
+import AgentCEO from "./pages/AgentCEO";
 import Companies from "./pages/Companies";
 import Vision from "./pages/Vision";
 import NotFound from "./pages/NotFound";
