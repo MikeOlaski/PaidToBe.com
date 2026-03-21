@@ -153,9 +153,18 @@ export default function Navbar() {
               </Link>
             ))}
             {isAdmin && (
-              <Link to="/admin" onClick={() => setMobileOpen(false)}>
-                <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} className="w-full justify-start text-accent">Admin Dashboard</Button>
-              </Link>
+              <div className="flex flex-col gap-1 px-4 py-2 border-l-2 ml-2">
+                <div className="text-[10px] font-bold mb-1 text-muted-foreground uppercase tracking-widest text-accent">Admin</div>
+                <Link to="/admin" onClick={() => setMobileOpen(false)}>
+                  <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Control Panel</Button>
+                </Link>
+                <Link to="/admin/health" onClick={() => setMobileOpen(false)}>
+                  <Button variant={location.pathname === "/admin/health" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Business Health</Button>
+                </Link>
+                <Link to="/admin/agent" onClick={() => setMobileOpen(false)}>
+                  <Button variant={location.pathname === "/admin/agent" ? "secondary" : "ghost"} className="w-full justify-start text-sm">Agent CEO — Tobe</Button>
+                </Link>
+              </div>
             )}
             {user ? (
               <Button variant="ghost" className="w-full justify-start text-destructive" onClick={() => { signOut(); setMobileOpen(false); }}>
