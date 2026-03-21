@@ -25,7 +25,7 @@ export default function WaitlistModal({ open, source, onClose }: WaitlistModalPr
     setLoading(true);
     const { error: dbError } = await supabase
       .from("waitlist")
-      .insert({ email: email.trim().toLowerCase(), source: source ?? "homepage" });
+      .insert([{ email: email.trim().toLowerCase(), source: source ?? "homepage" }]);
 
     setLoading(false);
 
