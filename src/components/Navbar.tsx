@@ -74,11 +74,24 @@ export default function Navbar() {
             </Link>
           ))}
           {isAdmin && (
-            <Link to="/admin">
-              <Button variant={location.pathname === "/admin" ? "secondary" : "ghost"} size="sm" className="text-sm font-medium gap-1 text-accent">
-                <Settings className="h-4 w-4" /> Admin
-              </Button>
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant={location.pathname.startsWith("/admin") ? "secondary" : "ghost"} size="sm" className="text-sm font-medium gap-1 text-accent">
+                  <Settings className="h-4 w-4" /> Admin <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild>
+                  <Link to="/admin" className="w-full cursor-pointer">Control Panel</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/admin/health" className="w-full cursor-pointer">Business Health</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/admin/agent" className="w-full cursor-pointer">Agent CEO — Tobe</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           )}
           {user ? (
             <DropdownMenu>
