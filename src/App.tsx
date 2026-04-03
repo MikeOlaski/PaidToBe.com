@@ -28,6 +28,7 @@ import BusinessHealth from "./pages/BusinessHealth";
 import AgentCEO from "./pages/AgentCEO";
 import Companies from "./pages/Companies";
 import Vision from "./pages/Vision";
+import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="/jobs" element={<JobsDirectory />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/vision" element={<Vision />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/a/:slug" element={<JobDetail />} />
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/membership" element={<Membership />} />

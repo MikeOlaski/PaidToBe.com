@@ -13,6 +13,7 @@ import { LogOut, Settings, User as UserIcon } from "lucide-react";
 
 const navItems = [
   { label: "Vision", path: "/vision" },
+  { label: "Projects", path: "/projects" },
   { label: "Jobs", path: "/jobs" },
   { label: "Companies", path: "/companies" },
   { label: "Policies", path: "/policies" },
@@ -36,6 +37,11 @@ export default function Navbar() {
           <Link to="/vision">
             <Button variant={location.pathname === "/vision" ? "secondary" : "ghost"} size="sm" className="text-sm font-medium">
               Vision
+            </Button>
+          </Link>
+          <Link to="/projects">
+            <Button variant={location.pathname === "/projects" ? "secondary" : "ghost"} size="sm" className="text-sm font-medium">
+              Projects
             </Button>
           </Link>
           <Link to="/jobs">
@@ -66,7 +72,7 @@ export default function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          {navItems.filter(item => !["Vision", "Jobs", "Companies"].includes(item.label)).map((item) => (
+          {navItems.filter(item => !["Vision", "Projects", "Jobs", "Companies"].includes(item.label)).map((item) => (
             <Link key={item.path} to={item.path}>
               <Button variant={location.pathname === item.path ? "secondary" : "ghost"} size="sm" className="text-sm font-medium">
                 {item.label}
@@ -130,7 +136,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="border-t bg-background p-4 lg:hidden">
           <nav className="flex flex-col gap-2">
-            {navItems.filter(item => ["Vision", "Jobs", "Companies"].includes(item.label)).map((item) => (
+            {navItems.filter(item => ["Vision", "Projects", "Jobs", "Companies"].includes(item.label)).map((item) => (
               <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)}>
                 <Button variant={location.pathname === item.path ? "secondary" : "ghost"} className="w-full justify-start font-semibold">{item.label}</Button>
               </Link>
