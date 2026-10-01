@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "agent/remove-malicious-eslint-loader",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "agent/remove-malicious-eslint-loader": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "agent/remove-malicious-eslint-loader",
+    "origin"
+  ]
+}
